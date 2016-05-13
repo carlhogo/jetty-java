@@ -3,8 +3,10 @@
  */
 
 import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.server.handler.HandlerCollection;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
+import org.eclipse.jetty.webapp.WebAppContext;
 
 public class JettyExample {
 
@@ -16,7 +18,6 @@ public class JettyExample {
         Server server = new Server(2222);
         server.setHandler(context);
 
-
         ServletHolder servlet = context.addServlet(org.glassfish.jersey.servlet.ServletContainer.class, "/*");
 
         servlet.setInitOrder(0);
@@ -24,9 +25,7 @@ public class JettyExample {
         // Tells the Jersey Servlet which REST service/class to load.
         servlet.setInitParameter(
                 "jersey.config.server.provider.classnames",
-                Resource.class.getCanonicalName());
-
-        try {
+                Resource.class.getCanonicalName());try {
             server.start();
             server.join();
         } finally {
