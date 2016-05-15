@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jetty_example-1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/target/jetty_example-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

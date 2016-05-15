@@ -20,6 +20,6 @@ public class JettyExample {
         servlet.setInitParameter("jersey.config.server.provider.classnames", Resource.class.getCanonicalName());
         server.start();
         server.join();
-        
+
     }
 }
