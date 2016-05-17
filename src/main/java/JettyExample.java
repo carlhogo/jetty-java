@@ -12,8 +12,8 @@ public class JettyExample {
 
     public static void main(String[] args) throws Exception {
 
-        //Server server = new Server(Integer.valueOf(System.getenv("PORT")));
-        Server server = new Server(8080);
+        Server server = new Server(Integer.valueOf(System.getenv("PORT")));
+        //Server server = new Server(8080);
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.setContextPath("/");
         server.setHandler(context);
