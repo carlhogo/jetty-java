@@ -1,3 +1,4 @@
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
@@ -5,7 +6,7 @@ import javax.ws.rs.core.MediaType;
  * Created by carlhogo on 12/05/16.
  */
 @Path("home")
-public class Resource {
+public class Resource{
     @GET
     @Path("hello")
     @Produces(MediaType.TEXT_PLAIN)
