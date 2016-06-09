@@ -15,6 +15,17 @@ public class Resource{
     }
 
     @GET
+    @Path("saludo")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Saludo saludar() {
+
+        Saludo a = new Saludo();
+        a.setSal("hello world");
+        return a;
+    }
+
+
+    @GET
     @Path("param")
     @Produces(MediaType.TEXT_PLAIN)
     public String paramMethod(@QueryParam("name") String name) {
@@ -34,5 +45,16 @@ public class Resource{
     @Produces(MediaType.TEXT_HTML)
     public String postMethod(@FormParam("name") String name) {
         return "<h2>Hello, " + name + "</h2>";
+    }
+
+    static class Saludo{
+        String sal;
+
+        public String getSal() {
+            return sal;
+        }
+        public void setSal(String action) {
+            this.sal = sal;
+        }
     }
 }
