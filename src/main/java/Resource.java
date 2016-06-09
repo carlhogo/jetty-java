@@ -53,7 +53,7 @@ public class Resource{
         public String getSal() {
             return sal;
         }
-        public void setSal(String action) {
+        public void setSal(String sal) {
             this.sal = sal;
         }
     }
